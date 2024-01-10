@@ -1,0 +1,82 @@
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+html {
+  color-scheme: dark light;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+/* min body height */
+body {
+  min-height: 100svh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Improved heading in supported browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+/* improve readability with max-width on paragraphs and lists */
+/* prevent orphans in supported browsers */
+p,
+li {
+  max-width: var(--p-max-width, 65ch);
+  text-wrap: pretty;
+}
+
+ul {
+  max-width: 500px;
+  margin-inline: auto;
+  margin-top: 3rem;
+
+  li {
+    margin-block: 0.5rem;
+    padding: 0.5rem;
+
+    &:nth-of-type(even) {
+      background-color: #101010;
+    }
+  }
+
+  /* li:nth-of-type(even) {
+    
+  } */
+}
