@@ -1,5 +1,5 @@
 import fetchData from "../fetchData";
-const API_URL = "https://rickandmortyapi.com/api/character";
+const API_URL = "https://rickandmortyapi.com/api/charater";
 const resource = fetchData(API_URL);
 
 export function CharactersList() {
